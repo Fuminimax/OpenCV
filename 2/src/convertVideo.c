@@ -9,12 +9,13 @@
 #include "highgui.h"
 
 void example2_4(IplImage *image){
-	// ���͉摜�Əo�͉摜��\������E�B���h�E���쐬����
+	// 入力画像と出力画像を表示するウィンドウを作成する
 	cvNamedWindow("Example4-in");
 	cvNamedWindow("Example4-out");
 
-	// ���͉摜��\������E�B���h�E���쐬����
+	// 入力画像を表示する
 	cvShowImage("Example4-in", image);
 
-
+	// 平滑化した出力を保持する画像を作成する
+	IplImage *out = cvCreateImage(cvGetSize(image), IPL_DEPTH_8U, 3);
 }
